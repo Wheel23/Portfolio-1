@@ -1,0 +1,137 @@
+.Imagem img{
+position: absolute;
+width: 15vh;
+
+}
+
+@keyframes transitionIn{
+    from{
+opacity: 0;
+transform: rotateX(-10deg);
+
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.container{
+    text-align: center;
+    margin-left: 75%;
+}
+.btn{
+    border: 1px solid #000000;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s; 
+    position: relative;
+    overflow: hidden;
+}
+
+.btn1, .btn2{
+    color: #000000;
+}
+
+.btn1:hover, .btn2:hover{
+    color: white;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #000000;
+    transition: 0.8s;
+    z-index: -1;
+}
+
+.btn1::before,{
+    top: 0;
+    border-radius: 0 0 50% 50%  ;
+}
+
+.btn1::before,.btn2::before{
+    bottom: 0;
+    border-radius: 50% 50%  0 0 ;
+}
+
+.btn1:hover::before,.btn2:hover::before{
+    height: 180%;
+}
+
+*{
+    animation: transitionIn 1s;
+}
+
+.Foto{
+    top: 0;
+   position: relative;
+    left: 0;
+    width: 40vh;
+  height: 50vh;
+    background-image: url(Lindo.jpg);
+    background-size: 100%;
+margin-left: -144vh ;
+margin-top: -20vh;
+ background-repeat: no-repeat;
+size-adjust: auto;
+border: 10px solid #000000;
+border-radius: 20px;
+transition-duration: 0.8s;
+opacity: 80%;
+display: flex;
+padding: 0;
+justify-content: center;
+align-items: top;
+}
+
+
+.Bagu{
+
+top: 0;
+left: 0;
+width: 20vh;
+height: 30vh;
+background-image: url(Brabo.gif);
+background-size: 30vh;
+margin-left: 40%;
+background-repeat: no-repeat;
+margin-top: -95vh;
+
+
+}
+
+.Flor{
+top: 0;
+position: relative;
+left: 0;
+width: 100vh;
+height: 100vh;
+background-image: url(HAH.gif);
+background-size: 75%;
+margin-left: -85vh;
+margin-top: -60vh;
+background-repeat: no-repeat; 
+z-index: -1; 
+opacity: 35%;
+filter: blur(5px);
+}
+
+.Foto:hover{
+    background-size: -100%  ;
+    opacity: 100%;
+    border: 5px solid #000000;
+}
+
+.bra{
+    width: 5vh;
+    height: 30vh;
+
+
+}
